@@ -1,0 +1,23 @@
+public interface Visible
+{
+    abstract boolean makeVisible();
+    abstract boolean makeInvisible();
+}
+class InterfaceImplementation implements Visible{
+    @Override
+    public boolean makeVisible() {
+        return true;
+    }
+    @Override
+    public boolean makeInvisible()
+    {
+        return false;
+    }
+    public static void main(String [] args) {
+        {
+            InterfaceImplementation ic = new InterfaceImplementation();
+            System.out.println("The Visibility is " + ic.makeVisible());
+            System.out.println("The Visibility is " + ic.makeInvisible());
+        }
+    }
+}
